@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .khung{
+            border:solid 1px rgb(166, 137, 137);
+            display:inline-block;
+            background-color: antiquewhite;
+        }
+        .ll{
+            margin-right:9px;
+        }
+    </style>
+</head>
+<body>
+<div class="khung">
+    <input type="text" value="" id="f1"><br>
+    <h6>ans</h6>
+    <p id="demo"></p>
+    <tr>
+        <td>
+            <button class="ll" style="width:50px;height:50px" id="n1" onclick="nUt1()">1</button>
+        </td>
+        <td>
+            <button class="ll" style="width:50px;height:50px" id="n2" onclick="nUt2()">2</button>
+        </td>
+        <td>
+            <button class="ll" style="width:50px;height:50px" id="n3" onclick="nUt3()">3</button>
+        </td>
+        <td>
+            <button class="ll" style="margin-right: 0px;width:50px;height:50px" id="nc" onclick="nUtc()">+</button>
+        </td>
+    </tr><br>
+    <tr>
+        <td>
+            <button class="ll" style="width:50px;height:50px" id="n4" onclick="nUt4()">4</button>
+        </td>
+        <td>
+            <button class="ll" style="width:50px;height:50px" id="n5" onclick="nUt5()">5</button>
+        </td>
+        <td>
+            <button class="ll" style="width:50px;height:50px" id="n6" onclick="nUt6()">6</button>
+        </td>
+        <td>
+            <button class="ll" style="margin-right: 0px;width:50px;height:50px" id="nt" onclick="nUtt()">-</button>
+        </td>
+    </tr><br>
+    <tr>
+        <td>
+            <button class="ll" style="width:50px;height:50px" id="n7" onclick="nUt7()">7</button>
+        </td>
+        <td>
+            <button class="ll" style="width:50px;height:50px" id="n8" onclick="nUt8()">8</button>
+        </td>
+        <td>
+            <button class="ll" style="width:50px;height:50px" id="n9" onclick="nUt9()">9</button>
+        </td>
+        <td>
+            <button class="ll" style="margin-right: 0px;width:50px;height:50px" id="nn" onclick="nUtn()">x</button>
+        </td>
+    </tr><br>
+    <tr>
+        <td>
+            <button class="ll" style="width:50px;height:50px" id="n0" onclick="nUt0()">0</button>
+        </td>
+        <td>
+            <button class="ll" style="width:50px;height:50px" id="ncham" onclick="nUtcham()">.</button>
+        </td>
+        <td>
+            <button class="ll" style="width:50px;height:50px" id="nb" onclick="nUtb()">=</button>
+        </td>
+        <td>
+            <button class="ll" style="margin-right: 0px;width:50px;height:50px" id="nchia" onclick="nUtchia()">/</button>
+        </td>
+    </tr>  
+</div>  
+    <script>
+        let a=-1;
+        let b=-1;
+        let c=0;
+        function nUt1(){
+            if(a!=-1){
+                a=1;
+            }else{
+                b=1;
+            }
+        }
+        function nUt2(){
+            if(a!=-1){
+                a=2;
+            }else{
+                b=2;
+            }
+        }
+        function nUt3(){
+            if(a!=-1){
+                a=3;
+            }else{
+                b=3;
+            }
+        }
+        function nUt4(){
+            if(a!=-1){
+                a=4;
+            }else{
+                b=4;
+            }
+        }
+        function nUt5(){
+            if(a!=-1){
+                a=5;
+            }else{
+                b=5;
+            }
+        }
+        function nUt6(){
+            if(a!=-1){
+                a=6;
+            }else{
+                b=6;
+            }
+        }
+        function nUt7(){
+            if(a!=-1){
+                a=7;
+            }else{
+                b=7;
+            }
+        }
+        function nUt8(){
+            if(a!=-1){
+                a=8;
+            }else{
+                b=8;
+            }
+        }
+        function nUt9(){
+            if(a!=-1){
+                a=9;
+            }else{
+                b=9;
+            }
+        }
+        function nUt0(){
+            if(a!=-1){
+                a=0;
+            }else{
+                b=0;
+            }
+        }
+        function nUtc(){
+            c=a/1+b/1;
+        }
+        function nUtt(){
+            c=a*b;
+        }
+        function nUtn(){
+            c=a*b;
+        }
+        function nUtchia(){
+            c=a/b;
+        }
+        
+        function nUtb(){
+            document.getElementById("demo").innerHTML=c;
+        }
+        
+    </script>
+    
+</body>
+</html>

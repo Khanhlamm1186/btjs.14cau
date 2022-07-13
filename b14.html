@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>game lat bai</title>
+    <style>
+        .imgg{
+            width:100%;        
+        }
+        .lb{
+            border:solid 1px rgb(36, 71, 71);
+            width:30%;
+            margin-left: 30%;
+        }
+        td{
+            width:1%;
+        }
+        .imgg{
+            border-radius:5%;
+            -moz-border-radius:5%;
+            -webkit-border-radius:5%;
+        }
+        .imgg{
+            transform: scale(1);
+            transition: all 0.5s;
+        }
+        .imgg:hover{
+            transform: scale(1.1);
+        }
+        body{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <footer style="border:solid 1px rgb(178, 22, 32);background-color:rgb(178, 22, 32);border-radius: 4px ;">Game Lật Bài</footer>
+    <div style="border:solid 1px black;border-radius: 1%;background-color: rgb(36, 71, 71);padding:10px;height:700px;">
+        <table>
+            <tr>
+                <td>
+                    <div class="lb"">
+                        <img id= "a1" onclick="setTimeout(a11, 1000);" class="imgg" src="/images/labaiup.jpg"/>
+                    </div>
+                </td>
+                <td>
+                    <div class="lb" >
+                        <img id="a2" onclick="setTimeout(a12, 1000);" class="imgg" src="/images/labaiup.jpg"/>
+                    </div>
+                </td>
+                <td>
+                    <div class="lb">
+                        <img id= "a3" onclick="setTimeout(a13, 1000);" class="imgg" src="/images/labaiup.jpg"/>
+                    </div>
+                </td>
+                <td>
+                    <div class="lb">
+                        <img id= "a4"onclick="setTimeout(a14, 1000);" class="imgg" src="/images/labaiup.jpg"/>
+                    </div>
+                </td>
+                <td>
+                    <div class="lb">
+                        <img id= "a5"onclick="setTimeout(a15, 1000);" class="imgg" src="/images/labaiup.jpg"/>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="lb">
+                        <img id= "a6"onclick="setTimeout(a21, 1000);" class="imgg" src="/images/labaiup.jpg"/>
+                    </div>
+                </td>
+                <td>
+                    <div class="lb">
+                        <img id= "a7"onclick="setTimeout(a22, 1000);" class="imgg" src="/images/labaiup.jpg"/>
+                    </div>
+                </td>
+                <td>
+                    <div class="lb">
+                        <img id= "a8"onclick="setTimeout(a23, 1000);" class="imgg" src="/images/labaiup.jpg"/>
+                    </div>
+                </td>
+                <td>
+                    <div class="lb">
+                        <img id= "a9"onclick="setTimeout(a24, 1000);" class="imgg" src="/images/labaiup.jpg"/>
+                    </div>
+                </td>
+                <td>
+                    <div class="lb">
+                        <img id= "a10"onclick="setTimeout(a25, 1000);" class="imgg" src="/images/labaiup.jpg"/>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="lb">
+                        <img id= "a11"onclick="setTimeout(a31, 1000);" class="imgg" src="/images/labaiup.jpg"/>
+                    </div>
+                </td>
+                <td>
+                    <div class="lb">
+                        <img id= "a12"onclick="setTimeout(a32, 1000);" class="imgg" src="/images/labaiup.jpg"/>
+                    </div>
+                </td>
+                <td>
+                    <div class="lb">
+                        <img id= "a13"onclick="setTimeout(a33, 1000);" class="imgg" src="/images/labaiup.jpg"/>
+                    </div>
+                </td>
+                <td>
+                    <div class="lb">
+                        <img id= "a14"onclick="setTimeout(a34, 1000);" class="imgg" src="/images/labaiup.jpg"/>
+                    </div>
+                </td>
+                <td>
+                    <div class="lb">
+                        <img id= "a15"onclick="setTimeout(a35, 1000);" class="imgg" src="/images/labaiup.jpg"/>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="lb">
+                        <img id= "a16"onclick="setTimeout(a41, 1000);" class="imgg" src="/images/labaiup.jpg"/>
+                    </div>
+                </td>
+                <td>
+                    <div class="lb">
+                        <img id= "a17"onclick="setTimeout(a42, 1000);" class="imgg" src="/images/labaiup.jpg"/>
+                    </div>
+                </td>
+                <td>
+                    <div class="lb">
+                        <img id= "a18"onclick="setTimeout(a43, 1000);" class="imgg" src="/images/labaiup.jpg"/>
+                    </div>
+                </td>
+                <td>
+                    <div class="lb">
+                        <img id= "a19"onclick="setTimeout(a44, 1000);" class="imgg" src="/images/labaiup.jpg"/>
+                    </div>
+                </td>
+                <td>
+                    <div class="lb">
+                        <img id= "a20"onclick="setTimeout(a45, 1000);" class="imgg" src="/images/labaiup.jpg"/>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+<script>
+    var cnt=0;
+    function a11(){
+        document.getElementById("a1").src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn6wv91w03NOdM8wg74u5DnSD8Y5NJCxQ8bQ&usqp=CAU";
+        cnt++;
+        if(cnt%2==0 && cnt!=0){
+            document.getElementById("a1").src="/images/labaiup.jpg";
+        }else{
+            var x1=1;
+        }
+    }
+    function a42(){
+        document.getElementById("a17").src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn6wv91w03NOdM8wg74u5DnSD8Y5NJCxQ8bQ&usqp=CAU";
+        cnt++;
+        if(cnt%2==0 && cnt!=0){
+            document.getElementById("a17").src="/images/labaiup.jpg";
+        }else{
+            var x2=1;
+        }
+    }
+    function a14(){
+        document.getElementById("a4").src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXtPWKykm7yUnfn6ZMb4p5nGsWg3KD4XjF5Q&usqp=CAU";
+        cnt++;
+        if(cnt%2==0 && cnt!=0){
+            document.getElementById("a4").src="/images/labaiup.jpg";
+        }else{
+            var x3=1;
+        }
+    }
+    function a35(){
+        document.getElementById("a15").src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXtPWKykm7yUnfn6ZMb4p5nGsWg3KD4XjF5Q&usqp=CAU";
+        cnt++;
+        if(cnt%2==0 && cnt!=0){
+            document.getElementById("a15").src="/images/labaiup.jpg";
+            cnt=0;
+        }else{
+            var x4=1;
+        }
+    }
+    function a12(){
+        document.getElementById("a2").src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBGaazlNeFvcEwQghAm4OIrdMDrywPw6PoGw&usqp=CAU";
+        cnt++;
+        if(cnt%2==0 && cnt!=0){
+            document.getElementById("a2").src="/images/labaiup.jpg";
+            cnt=0;
+        }else{
+            var x5=1;
+        }
+    }
+    function a34(){
+        document.getElementById("a14").src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBGaazlNeFvcEwQghAm4OIrdMDrywPw6PoGw&usqp=CAU";
+        cnt++;
+        if(cnt%2==0 && cnt!=0){
+            document.getElementById("a14").src="/images/labaiup.jpg";
+            cnt=0;
+        }else{
+            var x6=1;
+        }
+    }
+    function a13(){
+        document.getElementById("a3").src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiJiKkCA8ehjiw5wfmwq856Hor80OgDdDkFw&usqp=CAU";
+        cnt++;
+        if(cnt%2==0 && cnt!=0){
+            document.getElementById("a3").src="/images/labaiup.jpg";
+            cnt=0;
+        }else{
+            var x7=1;
+        }
+    }
+    function a33(){
+        document.getElementById("a13").src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiJiKkCA8ehjiw5wfmwq856Hor80OgDdDkFw&usqp=CAU";
+        cnt++;
+        if(cnt%2==0 && cnt!=0){
+            document.getElementById("a13").src="/images/labaiup.jpg";
+            cnt=0;
+        }else{
+            var x8=1;
+        }
+    }
+    function a15(){
+        document.getElementById("a5").src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLokYogOywq1rhcUuECY90tJwDTzlLQ95Cig&usqp=CAU";
+        cnt++;
+        if(cnt%2==0 && cnt!=0){
+            document.getElementById("a5").src="/images/labaiup.jpg";
+            cnt=0;
+        }else{
+            var x9=1;
+        }
+    }
+    function a32(){
+        document.getElementById("a12").src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLokYogOywq1rhcUuECY90tJwDTzlLQ95Cig&usqp=CAU";
+        cnt++;
+        if(cnt%2==0 && cnt!=0){
+            document.getElementById("a12").src="/images/labaiup.jpg";
+            cnt=0;
+        }else{
+            var x10=1;
+        }
+    }
+    function a21(){
+        document.getElementById("a6").src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaWy_dx1sCEiMrhamF9W3F_CaWCoy8IKGUNw&usqp=CAU";
+        cnt++;
+        if(cnt%2==0 && cnt!=0){
+            document.getElementById("a6").src="/images/labaiup.jpg";
+            cnt=0;
+        }else{
+            var x11=1;
+        }
+    }
+    function a31(){
+        document.getElementById("a11").src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaWy_dx1sCEiMrhamF9W3F_CaWCoy8IKGUNw&usqp=CAU";
+        cnt++;
+        if(cnt%2==0 && cnt!=0){
+            document.getElementById("a11").src="/images/labaiup.jpg";
+            cnt=0;
+        }else{
+            var x12=1;
+        }
+    }
+    function a22(){
+        document.getElementById("a7").src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqjoXdEKRWRBd-RxBd0ezjviJV6R0pp-wjXw&usqp=CAU";
+        cnt++;
+        if(cnt%2==0 && cnt!=0){
+            document.getElementById("a7").src="/images/labaiup.jpg";
+            cnt=0;
+        }else{
+            var x13=1;
+        }
+    }
+    function a45(){
+        document.getElementById("a20").src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqjoXdEKRWRBd-RxBd0ezjviJV6R0pp-wjXw&usqp=CAU";
+        cnt++;
+        if(cnt%2==0 && cnt!=0){
+            document.getElementById("a20").src="/images/labaiup.jpg";
+            cnt=0;
+        }else{
+            var x14=1;
+        }
+    }
+    function a23(){
+        document.getElementById("a8").src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4ebr4lC67lA_qM7qkVdw2vSJgT6sMHLXoXw&usqp=CAU";
+        cnt++;
+        if(cnt%2==0 && cnt!=0){
+            document.getElementById("a8").src="/images/labaiup.jpg";
+            cnt=0;
+        }else{
+            var x15=1;
+        }
+    }
+    function a44(){
+        document.getElementById("a19").src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4ebr4lC67lA_qM7qkVdw2vSJgT6sMHLXoXw&usqp=CAU";
+        cnt++;
+        if(cnt%2==0 && cnt!=0){
+            document.getElementById("a19").src="/images/labaiup.jpg";
+            cnt=0;
+        }else{
+            var x16=1;
+        }
+    }
+    function a24(){
+        document.getElementById("a9").src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzBM5-0eWWB2gnyu0r88KROTDZDPtgY5SWXg&usqp=CAU";
+        cnt++;
+        if(cnt%2==0 && cnt!=0){
+            document.getElementById("a9").src="/images/labaiup.jpg";
+            cnt=0;
+        }else{
+            var x17=1;
+        }
+    }
+    function a43(){
+        document.getElementById("a18").src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzBM5-0eWWB2gnyu0r88KROTDZDPtgY5SWXg&usqp=CAU";
+        cnt++;
+        if(cnt%2==0 && cnt!=0){
+            document.getElementById("a18").src="/images/labaiup.jpg";
+            cnt=0;
+        }else{
+            var x18=1;
+        }
+    }
+    function a25(){
+        document.getElementById("a10").src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeY9HFI32B2AYJ57JzPsXJDaH-f_xJ0z3QgA&usqp=CAU";
+        cnt++;
+        if(cnt%2==0 && cnt!=0){
+            document.getElementById("a10").src="/images/labaiup.jpg";
+            cnt=0;
+        }else{
+            var x19=1;
+        }
+    }
+    function a41(){
+        document.getElementById("a16").src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeY9HFI32B2AYJ57JzPsXJDaH-f_xJ0z3QgA&usqp=CAU";
+        cnt++;
+        if(cnt%2==0 && cnt!=0){
+            document.getElementById("a16").src="/images/labaiup.jpg";
+            cnt=0;
+        }else{
+            var x20=1;
+        }
+    }
+</script>
+</html>

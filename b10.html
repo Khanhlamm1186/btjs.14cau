@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:rgb(145, 152, 204);
+        }
+    </style>
+</head>
+<body>
+    <button id="play">Play</button>
+    <table>
+        <tr>
+            <td>
+                <button id="n1" onclick="N1()" style="width:50px;height:50px"><p id="d1"></p></button>
+            </td>
+            <td>
+                <button id="n2" onclick="N2()" style="width:50px;height:50px"><p id="d2"></p></button>
+            </td>
+            <td>
+                <button id="n3" onclick="N3()" style="width:50px;height:50px"><p id="d3"></p></button>
+            </td> 
+        </tr>
+        <tr>
+            <td>
+                <button id="n4" onclick="N4()" style="width:50px;height:50px"> <p id="d4"></p></button>
+            </td>
+            <td>
+                <button id="n5" onclick="N5()" style="width:50px;height:50px"><p id="d5"></p></button>
+            </td>
+            <td>
+                <button id="n6" onclick="N6()" style="width:50px;height:50px"><p id="d6"></p></button>
+            </td> 
+        </tr>
+        <tr>
+            <td>
+                <button id="n7" onclick="N7()" style="width:50px;height:50px"><p id="d7"></p></button>
+            </td>
+            <td>
+                <button id="n8" onclick="N8()" style="width:50px;height:50px"><p id="d8"></p></button>
+            </td>
+            <td>
+                <button id="n9" onclick="N9()" style="width:50px;height:50px"><p id="d9"></p></button>
+            </td> 
+        </tr>
+    </table>
+    <p id="demo"></p>
+    <script>
+        var cnt=0;
+        var c1,c2,c3,c4,c5,c6,c7,c8,c9;
+        function wIn(){
+            if(c1==c2==c3){
+                return 1;
+            }
+            if(c1==c5==c9){
+                return 1;
+            }
+            if(c1==c4==c7){
+                return 1;
+            }
+            if(c2==c5==c8){
+                return 1;
+            }
+            if(c7==c8==c9){
+                return 1;
+            }
+            if(c4==c5==c6){
+                return 1;
+            }
+            if(c7==c5==c3){
+                return 1;
+            }
+        }
+        function N1(){
+            if(cnt%2==0){
+                document.getElementById("d1").innerHTML="X";
+                c1=1;
+                cnt++;
+            }else{
+                document.getElementById("d1").innerHTML="O";
+                c1="O";cnt++;
+            }
+            if(wIn()==1){
+                alert("Win");
+                console.log(c1);
+            }
+        }
+        function N2(){
+            if(cnt%2==0){
+                document.getElementById("d2").innerHTML="X";
+                c2="X";cnt++;
+            }else{
+                document.getElementById("d2").innerHTML="O";
+                c2="O";cnt++;
+            }
+            if(wIn()==1){
+                alert("Win");
+                console.log("win");
+            }           
+        }
+            function N3(){
+            if(cnt%2==0){
+                document.getElementById("d3").innerHTML="X";
+                c3="X";cnt++;
+            }else{
+                document.getElementById("d3").innerHTML="O";
+                c3="O";cnt++;
+            }
+            if(wIn()==1){
+                alert("Win");
+                console.log("win");
+            }            
+        }
+            function N4(){
+            if(cnt%2==0){
+                document.getElementById("d4").innerHTML="X";
+                c4="X";cnt++;
+            }else{
+                document.getElementById("d4").innerHTML="O";
+                c4="O";cnt++;
+            }
+            if(wIn()==1){
+                alert("Win");
+                console.log("win");
+            }           
+        }
+            function N5(){
+            if(cnt%2==0){
+                document.getElementById("d5").innerHTML="X";
+                c5="X";cnt++;
+            }else{
+                document.getElementById("d5").innerHTML="O";
+                c5="O";cnt++;
+            }
+            if(wIn()==1){
+                alert("Win");
+                console.log("win");
+            }           
+        }
+        function N6(){
+            if(cnt%2==0){
+                document.getElementById("d6").innerHTML="X";
+                c6="X";cnt++;
+            }else{
+                document.getElementById("d6").innerHTML="O";
+                c6="O";cnt++;
+            }
+            if(wIn()==1){
+                alert("Win");
+                console.log("win");
+            }           
+        }
+        function N7(){
+            if(cnt%2==0){
+                document.getElementById("d7").innerHTML="X";
+                c7="X";cnt++;
+            }else{
+                document.getElementById("d7").innerHTML="O";
+                c7="O";cnt++;
+            }
+            if(wIn()==1){
+                alert("Win");
+                console.log("win");
+            }            
+        }
+        function N8(){
+            if(cnt%2==0){
+                document.getElementById("d8").innerHTML="X";
+                c8="X";cnt++;
+            }else{
+                document.getElementById("d8").innerHTML="O";
+                c8="O";cnt++;
+            }
+            if(wIn()==1){
+                alert("Win");
+                console.log("win");
+            }         
+        }
+        function N9(){
+            if(cnt%2==0){
+                document.getElementById("d9").innerHTML="X";
+                c9="X";cnt++;
+            }else{
+                document.getElementById("d9").innerHTML="O";
+                c9="O";cnt++;
+            }
+            if(wIn()==1){
+                alert("Win");
+                console.log("win");
+            }
+
+        } 
+    </script>
+</body>
+</html>

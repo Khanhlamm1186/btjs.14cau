@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="nam" placeholder="Năm"  />
+    <input type="text" id="thang" placeholder="Tháng" />
+    <p id="d1"></p>
+    <p id="d2"></p>
+    <p id="d3"></p>
+    <p id="d4"></p>
+    <p id="d5"></p>
+    <p id="d6"></p>
+    <p id="d7"></p>
+    <p id="d8"></p> 
+    <p id="d9"></p>
+    <p id="d10"></p>
+    <p id="d11"></p>
+    <p id="d12"></p>
+    <p id="d13"></p>
+    <p id="d14"></p>
+    <p id="d15"></p>
+    <p id="d16"></p>
+    <p id="d17"></p>
+    <p id="d18"></p> 
+    <p id="d19"></p>
+    <p id="d20"></p>
+    <p id="d21"></p>
+    <p id="d22"></p>
+    <p id="d23"></p>
+    <p id="d24"></p>
+    <p id="d25"></p>
+    <p id="d26"></p>
+    <p id="d27"></p>
+    <p id="d28"></p> 
+    <p id="d29"></p>
+    <p id="d30"></p>
+    
+    
+
+    <button onclick="lIch()">Lịch</button>  
+    <script>
+        function lIch(){  
+            var n=document.getElementById("nam").value;
+            var t=document.getElementById("thang").value;
+            var d = new Date(n, t, 1, 0, 0, 0);
+            document.getElementById("d1").innerHTML = d;  
+            var d = new Date(n, t, 2, 0, 0, 0);
+            document.getElementById("d2").innerHTML = d;
+            var d = new Date(n, t, 3, 0, 0, 0);
+            document.getElementById("d3").innerHTML = d;
+            var d = new Date(n, t, 4, 0, 0, 0);
+            document.getElementById("d4").innerHTML = d;
+            var d = new Date(n, t, 5, 0, 0, 0);
+            document.getElementById("d5").innerHTML = d;
+            var d = new Date(n, t, 6, 0, 0, 0);
+            document.getElementById("d6").innerHTML = d;  
+            var d = new Date(n, t, 7, 0, 0, 0);
+            document.getElementById("d7").innerHTML = d;
+            var d = new Date(n, t, 8, 0, 0, 0);
+            document.getElementById("d8").innerHTML = d;
+            var d = new Date(n, t, 9, 0, 0, 0);
+            document.getElementById("d9").innerHTML = d;
+            var d = new Date(n, t, 10, 0, 0, 0);
+            document.getElementById("d10").innerHTML = d;
+            var d = new Date(n, t, 11, 0, 0, 0);
+            document.getElementById("d11").innerHTML = d;  
+            var d = new Date(n, t, 12, 0, 0, 0);
+            document.getElementById("d12").innerHTML = d;
+            var d = new Date(n, t, 13, 0, 0, 0);
+            document.getElementById("d13").innerHTML = d;
+            var d = new Date(n, t, 14, 0, 0, 0);
+            document.getElementById("d14").innerHTML = d;
+            var d = new Date(n, t, 15, 0, 0, 0);
+            document.getElementById("d15").innerHTML = d;
+            var d = new Date(n, t, 16, 0, 0, 0);
+            document.getElementById("d16").innerHTML = d;  
+            var d = new Date(n, t, 17, 0, 0, 0);
+            document.getElementById("d17").innerHTML = d;
+            var d = new Date(n, t, 18, 0, 0, 0);
+            document.getElementById("d18").innerHTML = d;
+            var d = new Date(n, t, 19, 0, 0, 0);
+            document.getElementById("d19").innerHTML = d;
+            var d = new Date(n, t, 20, 0, 0, 0);
+            document.getElementById("d20").innerHTML = d;
+            var d = new Date(n, t, 21, 0, 0, 0);
+            document.getElementById("d21").innerHTML = d;  
+            var d = new Date(n, t, 22, 0, 0, 0);
+            document.getElementById("d22").innerHTML = d;
+            var d = new Date(n, t, 23, 0, 0, 0);
+            document.getElementById("d23").innerHTML = d;
+            var d = new Date(n, t, 24, 0, 0, 0);
+            document.getElementById("d24").innerHTML = d;
+            var d = new Date(n, t, 25, 0, 0, 0);
+            document.getElementById("d25").innerHTML = d;
+            var d = new Date(n, t, 26, 0, 0, 0);
+            document.getElementById("d26").innerHTML = d;  
+            var d = new Date(n, t, 27, 0, 0, 0);
+            document.getElementById("d27").innerHTML = d;
+            var d = new Date(n, t, 28, 0, 0, 0);
+            document.getElementById("d28").innerHTML = d;
+            var d = new Date(n, t, 29, 0, 0, 0);
+            document.getElementById("d29").innerHTML = d;
+            var d = new Date(n, t, 30, 0, 0, 0);
+            document.getElementById("d30").innerHTML = d;
+        
+        }
+    </script>
+</body>
+</html>
