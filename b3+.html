@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #98b5ff;
+}
+.wrapper {
+  width: 100%;
+  height: 600px;
+  max-width: 450px;
+  margin: 120px auto;
+  background: #2e4997;
+  border-radius: 25px;
+  padding: 25px;
+}
+.wrapper header {
+  font-size: 30px;
+  font-weight: 550;
+  color: #fdfefe;
+  letter-spacing: 1px;
+}
+.wrapper .inputField {
+  display: flex;
+  height: 45px;
+  width: 100%;
+  margin: 20px 0;
+}
+.inputField input {
+  width: 85%;
+  height: 100%;
+  outline: none;
+  border: 1px solid #ccc;
+  font-size: 17px;
+  border-radius: 5px;
+  padding-left: 15px;
+}
+.inputField button {
+  width: 60px;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: #ea05fe;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 3px;
+  margin-left: 5px;
+  font-size: 22px;
+  font-weight: 300;
+  opacity: 0.6;
+  pointer-events: none;
+}
+.inputField button.active {
+  opacity: 1;
+  pointer-events: auto;
+  /* Phần này lát mình sẽ thao tác bên Js nhé  */
+}
+
+.wrapper h4 {
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 1px;
+}
+.wrapper .todoList {
+  max-height: 400px;
+  overflow-y: auto;
+}
+.todoList li {
+  position: relative;
+  list-style: none;
+  width: 340px;
+  height: 60px;
+  background: #031956;
+  color: #a8b2c4;
+  padding: 0 15px;
+  line-height: 60px;
+  border-radius: 20px;
+  margin-bottom: 8px;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  cursor: default;
+  overflow: hidden;
+}
+.todoList li i {
+  position: absolute;
+  right: -30px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3 ease;
+}
+.todoList li:hover i {
+  right: 0px;
+}
+.wrapper .footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 25px;
+}
+.footer span {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.footer button {
+  border: none;
+  outline: none;
+  background: #ea05fe;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 3px;
+  padding: 6px 15px;
+  opacity: 0.6;
+  pointer-events: none;
+}
+.footer button.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Todo list</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>Design Tasks</header>
+        <div class="inputField">
+            <input type="text" placeholder="Enter New Task">
+            <button> <i class="fas fa-plus"></i> </button>
+        </div>
+        <h4>Today's Tasks</h4>
+        <ul class="todoList">
+            
+        </ul>
+        <div class="footer">
+            <span>You have <span class="pendingTasks"></span> pending tasks</span>
+            <button>Clear All</button>
+          </div>
+    </div>
+    <script>
+        const inputBox = document.querySelector(".inputField input");
+const addBtn = document.querySelector(".inputField button");
+const todoList = document.querySelector(".todoList");
+const deleteAllBtn = document.querySelector(".footer button");
+
+inputBox.onkeyup = ()=>{
+    // Lấy giá trị khi user nhập vào
+    let userEnteredValue = inputBox.value;
+    // Nếu user nhập vào giá trị ( không phải là khoảng trắng )
+    if(userEnteredValue.trim() != 0){
+        //  Thì nút add của ta sẽ sáng lên
+        // Trường hợp mình nhập toàn khoảng trắng ( space ) thì sẽ không sáng lên nhé 
+        addBtn.classList.add("active");
+    } else {
+        // Ngược lại thì không sáng nè
+        addBtn.classList.remove("active");
+    }
+}
+showTasks();
+addBtn.onclick = ()=>{
+    // Khi user nhấn vào nút Add 
+    // Lấy giá trị mà user đã nhập ở ô input
+    let userEnteredValue = inputBox.value;
+    // Lấy localStorage ( biến lưu trữ cục bộ )
+    let getLocalStorageData = localStorage.getItem("New todo");
+    if(getLocalStorageData == null){
+        // Nếu như localStorage = null
+        // Thì sẽ tạo ra 1 mảng rỗng
+        listArray = [];
+    } else {
+        // Ngược lại thì sẽ chuyển JSON từ dạng string sang Object
+        listArray = JSON.parse(getLocalStorageData);
+    }
+    // Đẩy giá trị mới vào mảng đã tạo
+    listArray.push(userEnteredValue);
+    localStorage.setItem("New todo", JSON.stringify(listArray)); // Chuyển JSON từ dạng Object sang String
+    showTasks();
+    addBtn.classList.remove("active");
+}
+function showTasks(){
+    let getLocalStorageData = localStorage.getItem("New todo");
+    if(getLocalStorageData == null){
+        // Nếu như localStorage = null
+        // Thì sẽ tạo ra 1 mảng rỗng
+        listArray = [];
+    } else {
+        // Ngược lại thì sẽ chuyển JSON từ dạng string sang Object
+        listArray = JSON.parse(getLocalStorageData);
+    }
+    const pendingTasksNumb = document.querySelector(".pendingTasks");
+  pendingTasksNumb.textContent = listArray.length; 
+  if(listArray.length > 0){ 
+    deleteAllBtn.classList.add("active"); 
+  }else{
+    deleteAllBtn.classList.remove("active"); 
+  }
+  let newLiTag = "";
+  listArray.forEach((element, index) => {
+    newLiTag += `<li>${element}<span class="icon" onclick="deleteTask(${index})"><i class="fas fa-trash"></i></span></li>`;
+  });
+  todoList.innerHTML = newLiTag; 
+  inputBox.value = ""; 
+}
+
+function deleteTask(index){l
+  let getLocalStorageData = ocalStorage.getItem("New todo");
+  listArray = JSON.parse(getLocalStorageData);
+  listArray.splice(index, 1); 
+  localStorage.setItem("New todo", JSON.stringify(listArray));
+  showTasks();
+}
+
+deleteAllBtn.onclick = ()=>{
+  listArray = []; 
+  localStorage.setItem("New todo", JSON.stringify(listArray)); 
+  showTasks(); 
+}
+    </script>
+</body>
+</html>
+</body>
+</html>
